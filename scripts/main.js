@@ -28,13 +28,18 @@ dt[i].onclick = function() {
 		}
 		sp.innerHTML = '<img src="./images/arrow-up.svg" alt="arrow-up">';
 		dd[i].setAttribute('class', 'dd-current');
-		dt[i].setAttribute('class', 'dt-active');
+		//dt[i].setAttribute('class', 'dt-active');
 	} else {
 		sp.innerHTML = '<img src="./images/arrow-down.svg" alt="arrow-down">';
 		dd[i].removeAttribute('class');
-		dt[i].removeAttribute('class');
+		//dt[i].removeAttribute('class');
 	}
 }
 }
+
+$("#accordion dt").click(function() {
+    $("#accordion dt").removeClass("dt-active");
+    $(this).addClass("dt-active");
+  });
 
 });
