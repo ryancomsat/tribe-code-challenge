@@ -1,4 +1,11 @@
  $(document).ready(function() {
+
+
+	AOS.init({
+		offset: 500,
+		mirror: true
+	});
+
   $(".hamburger").click(function() {
     $("body").toggleClass("mobile-menu-open")
   }),
@@ -37,9 +44,25 @@ dt[i].onclick = function() {
 }
 }
 
-$("#accordion dt").click(function() {
-    $("#accordion dt").removeClass("dt-active");
+imagesA = $("#img-accordion > img").hide();
+imagesA.first().show();
+
+ $("#accordion dt").click(function() {
+ 	$("#accordion dt").removeClass("dt-active");
     $(this).addClass("dt-active");
-  });
+ 	let panel = $(this),
+ 		tabName = panel.attr("tab-name"),
+ 		image = $("#" + tabName + "-img");
+
+ 	imagesA.slideUp();
+ 	image.slideDown();
+
+ 	return false;
+ });
+
+
 
 });
+
+
+  
