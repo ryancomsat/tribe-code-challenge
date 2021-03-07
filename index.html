@@ -6,41 +6,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tribe Code Challenge - Ryan Lucena</title>
 	<link rel="stylesheet" href="./styles/reset.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./styles/main.css">
 </head>
 <body class="test-lp">
 	<header class="main-header">
-		<div class="left-nav">
-			<div class="brand-logo">
-			<img src="./images/tribe-logo.svg" alt="tribe-logo">
+		<div class="header-container">
+			<div class="left-nav">
+				<div class="brand-logo">
+				<img src="./images/tribe-logo.svg" alt="tribe-logo">
+				</div>
+				<div class="main-nav">
+					<nav class="header-menu">
+						<ul role="menu">
+							<li class="menu-item platform">
+								<a href="#" role="menuitem">Platform</a>
+							</li>
+							<li class="menu-item solutions">
+								<a href="#" role="menuitem">Solutions</a>
+							</li>
+							<li class="menu-item learn">
+								<a href="#" role="menuitem">Learn</a>
+							</li>
+							<li class="menu-item pricing">
+								<a href="#" role="menuitem">Pricing</a>
+							</li>
+							<li class="menu-item creators">
+								<a href="#" role="menuitem">Creators</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-			<div class="main-nav">
-				<nav class="header-menu">
-					<ul role="menu">
-						<li class="menu-item">
-							<a href="#" role="menuitem">Brands & Agencies</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" role="menuitem">Solutions</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" role="menuitem">Learn</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" role="menuitem">Pricing</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" role="menuitem">Creators</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="right-menu">
+				<a href="#">LOGIN</a>
+				<span></span>
+				<a href="#">SIGN UP</a>
+				<a href="#" class="cta">REQUEST A DEMO</a>
 			</div>
-		</div>
-		<div class="right-menu">
-			<a href="#">LOGIN</a>
-			<span>&nbsp;</span>
-			<a href="#">SIGN UP</a>
-			<a href="#" class="cta">REQUEST A DEMO</a>
 		</div>
 	</header>
 	<header class="mobile-header">
@@ -53,7 +56,7 @@
 		<nav class="mobile-menu-wrap">
 			<ul role="menu">
 				<li class="menu-item">
-					<a href="#" role="menuitem">Brands & Agencies</a>
+					<a href="#" role="menuitem">Platform</a>
 				</li>
 				<li class="menu-item">
 					<a href="#" role="menuitem">Solutions</a>
@@ -75,11 +78,6 @@
 				</li>
 			</ul>
 		</nav>
-
-		<div class="mobile-cta">
-			<a class="cta" href="#">Request a Demo</a>
-		</div>
-
 	</aside>
 	<div class="hamburger-menu">
 		<div class="hamburger">
@@ -98,16 +96,16 @@
 
 			<div class="hero-image-wrap">
 				<div class="hero-images">
-					<div class="platform-box">
+					<div class="platform-box aos-init" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 						<img src="./images/platform-hero-1.png" class="platform-hero-1">
 					</div>
-					<div class="platform-box">
+					<div class="platform-box aos-init" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 						<img src="./images/platform-hero-2.png" class="platform-hero-2">
 					</div>
-					<div class="platform-box">
+					<div class="platform-box aos-init" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 						<img src="./images/platform-hero-3.png" class="platform-hero-3">
 					</div>
-					<div class="platform-box">
+					<div class="platform-box aos-init" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 						<img src="./images/platform-hero-4.png" class="platform-hero-4">
 					</div>
 				</div>
@@ -157,8 +155,12 @@
 
 		<section class="section-accordion">
 			<div class="container-lg">
-				<div class="image">
-					<img src="./images/accordion-placeholder.png" class="img-fluid">
+				<div class="image" id="img-accordion">
+					<img src="./images/accordion-placeholder.png" alt="CREATE A CAMPAIGN Image" class="img-fluid img1 show" id="acc1-img">
+					<img src="./images/accordion-placeholder.png" alt=">WATCH THE CONTENT ROLL IN" class="img-fluid img2" id="acc2-img">
+					<img src="./images/accordion-placeholder.png" alt="APPROVE. PUBLISH. REPEAT" class="img-fluid img3" id="acc3-img">
+					<img src="./images/accordion-placeholder.png" alt="MEASURE YOUR SUCCESS" class="img-fluid img4" id="acc4-img">
+					<img src="./images/accordion-placeholder.png" alt="LICENSE & AMPLIFY" class="img-fluid img5" id="acc5-img">
 				</div>
 				<div class="accordion-wrap">
 					<div class="accordion-content">
@@ -166,35 +168,40 @@
 					</div>
 
 					<dl id="accordion">
-					  	<dt class="dt-active">CREATE A CAMPAIGN 
+					  	<dt class="dt-active" tab-name="acc1">CREATE A CAMPAIGN 
 					  		<span><img src="./images/arrow-up.svg" alt="arrow-up"></span>
 					  	</dt>
 						<dd class="dd-current">
 							<p>Create a brief in under 10 minutes with the five-step Campaign Builder.</p>
+							<img src="./images/accordion-placeholder.png" alt="CREATE A CAMPAIGN Image" class="img-fluid img1 show-mobile">
 						</dd>
-						<dt>WATCH THE CONTENT ROLL IN
+						<dt tab-name="acc2">WATCH THE CONTENT ROLL IN
 							<span><img src="./images/arrow-down.svg" alt="arrow-down"></span>
 						</dt>
 						<dd>
 							<p>Create a brief in under 10 minutes with the five-step Campaign Builder.</p>
+							<img src="./images/accordion-placeholder.png" alt=">WATCH THE CONTENT ROLL IN" class="img-fluid img2 show-mobile">
 						</dd>
-						<dt>APPROVE. PUBLISH. REPEAT
+						<dt tab-name="acc3">APPROVE. PUBLISH. REPEAT
 							<span><img src="./images/arrow-down.svg" alt="arrow-down"></span>
 						</dt>
 						<dd>
 							<p>Create a brief in under 10 minutes with the five-step Campaign Builder.</p>
+							<img src="./images/accordion-placeholder.png" alt="APPROVE. PUBLISH. REPEAT" class="img-fluid img3 show-mobile" >
 						</dd>
-						<dt>MEASURE YOUR SUCCESS
+						<dt tab-name="acc4">MEASURE YOUR SUCCESS
 							<span><img src="./images/arrow-down.svg" alt="arrow-down"></span>
 						</dt>
 						<dd>
 							<p>Create a brief in under 10 minutes with the five-step Campaign Builder.</p>
+							<img src="./images/accordion-placeholder.png" alt="MEASURE YOUR SUCCESS" class="img-fluid img4 show-mobile">
 						</dd>
-						<dt>LICENSE & AMPLIFY
+						<dt tab-name="acc5">LICENSE & AMPLIFY
 							<span><img src="./images/arrow-down.svg" alt="arrow-down"></span>
 						</dt>
 						<dd>
 							<p>Create a brief in under 10 minutes with the five-step Campaign Builder.</p>
+							<img src="./images/accordion-placeholder.png" alt="LICENSE & AMPLIFY" class="img-fluid img5 show-mobile">
 						</dd>
 					</dl>
 
@@ -208,17 +215,17 @@
 	    <div class="footer-wrap">
 	      <div class="inner-box">
 	        <div class="location">
-	          <img data-src="./images/Footer-NYC-x2.png" class="lozad" alt="Footer-NYC-x2" width="156" height="156" src="./images/Footer-NYC-x2.png" data-loaded="true">
+	          <img src="./images/Footer-NYC-x2.png" alt="Footer-NYC-x2" width="156" height="156">
 	          <div class="location-address">
 	            <span class="name">New York</span>
-	            <span class="address-line">Floor 3, 230 Park Ave, New York City, New York 10169</span>
+	            <span class="address-line">One World Trade Center Suite 8500, New York NY 10007, USA</span>
 	          </div>
 	        </div>
 	      </div>
 
 	      <div class="inner-box">
 	        <div class="location">
-	          <img data-src="./images/Footer-LDN-x2.png" class="lozad" alt="Footer-LDN-x2" width="156" height="156" src="./images/Footer-LDN-x2.png" data-loaded="true">
+	          <img src="./images/Footer-LDN-x2.png" alt="Footer-LDN-x2" width="156" height="156" >
 	          <div class="location-address">
 	            <span class="name">London</span>
 	            <span class="address-line">3 Waterhouse Square 138 Holborn, London EC1N 2SW</span>
@@ -227,7 +234,7 @@
 	      </div>
 	      <div class="inner-box">
 	        <div class="location">
-	          <img data-src="./images/Footer-MEL-x2.png" class="lozad" alt="Footer-MEL-x2" width="156" height="156" src="./images/Footer-MEL-x2.png" data-loaded="true">
+	          <img src="./images/Footer-MEL-x2.png" alt="Footer-MEL-x2" width="156" height="156" >
 	          <div class="location-address">
 	            <span class="name">Melbourne</span>
 	            <span class="address-line">L4/180 Albert Rd, South Melbourne, VIC 3205</span>
@@ -236,7 +243,7 @@
 	      </div>
 	      <div class="inner-box">
 	        <div class="location">
-	          <img data-src="./images/Footer-SYD-x2.png" class="lozad" alt="Footer-SYD-x2" width="156" height="156" src="./images/Footer-SYD-x2.png" data-loaded="true">
+	          <img src="./images/Footer-SYD-x2.png" alt="Footer-SYD-x2" width="156" height="156" > 
 	          <div class="location-address">
 	            <span class="name">Sydney</span>
 	            <span class="address-line">L45/680 George St, Sydney, NSW 2000</span>
@@ -248,6 +255,7 @@
 	</div>
 	</footer>
 	<script defer src="https://www.tribegroup.co/hs-fs/hub/1609563/hub_generated/template_assets/6085872100/1593393898217/Coded_files/Custom/page/2018-TRIBE-assets/vendors.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="./scripts/main.js" type="text/javascript"></script>
 </body>
